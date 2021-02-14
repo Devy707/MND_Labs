@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laba1(Stetsenko Bogdan IV-93)</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <form class="form_input">
+            <label>Задайте значення a<sub>0</sub>: <input id="a0" type="number"></label><br>
+            <label>Задайте значення a<sub>1</sub>: <input id="a1" type="number"></label><br>
+            <label>Задайте значення a<sub>2</sub>: <input id="a2" type="number"></label><br>
+            <label>Задайте значення a<sub>3</sub>: <input id="a3" type="number"></label><br>
+            <button class="gradient-button" onclick="genXRandom(event)">Згенерувати X</button>
+            <button class="gradient-button" onclick="readX0(event)">Обчислити значення X<sub>0</sub></button>
+            <button class="gradient-button" onclick="readAllA(event)">Зберегти введені дані<br>та обрахувати Y</button>
+            <button class="gradient-button" onclick="readDX(event)">Обчислити значення DX</button>
+            <button class="gradient-button" onclick="readXn(event)">Обчислити значення Xn</button>
+            <button class="gradient-button" onclick="creat(event)">Критерій вибору : max(Y), та точки плану</button>
+        </form>
+    </div>
+    <table id="table">
+        <tr>
+            <th>Num</th>
+            <th>X1</th>
+            <th>X2</th>
+            <th>X3</th>
+            <th>Y</th>
+            <th>Xn1</th>
+            <th>Xn2</th>
+            <th>Xn3</th>
+        </tr>
+        <tr id="first">
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="second">
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="third">
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="fourth">
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="fifth">
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="sixth">
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="seventh">
+            <td>7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="eighth">
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="x0">
+            <th>X0</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="dx">
+            <th>DX</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="cr">
+            <th>Критерій вибору MAX(Y)</th>
+            <td>
+            </td>
+        </tr>
+        <tr id="et">
+            <th>Y<sub>эт</sub></th>
+            <td>
+            </td>
+        </tr>
+        <tr id="tp">
+            <th>Точки плану</th>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
