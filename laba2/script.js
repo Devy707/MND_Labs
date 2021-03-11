@@ -135,9 +135,62 @@ function main() {
     }
 
 
-    let rKr = 2.16;
-    let p = 0.99;
-    console.log(`Оскільки m=6, візьмемо значення Rkr = ${rKr} і довірчу ймовірність p = ${p}`);
+    let allrk1 = [1.73, 1.72, 1.71, 1.69];
+    let allrk2 = [2.16, 2.13, 2.1, 2];
+    let allrk3 = [2.43, 2.37, 2.27, 2.17];
+    let allrk4 = [2.62, 2.54, 2.41, 2.29];
+    let allrk5 = [2.75, 2.66, 2.52, 2.39];
+    let allrk6 = [2.9, 2.8, 2.64, 2.49];
+    let allrk7 = [3.08, 2.96, 2.78, 2.62];
+
+    let allp = [0.99, 0.98, 0.95, 0.9];
+    let rKr;
+    let p;
+    
+    if (m === 2) {
+        rKr = allrk1[Math.floor(Math.random() * allrk1.length)];
+        p = allp[allrk1.indexOf(rKr)];
+    } else if (m > 2 && m < 6) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk2) - Math.max.apply(null, allrk1)) + Math.max.apply(null, allrk1)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 6) {
+        rKr = allrk2[Math.floor(Math.random() * allrk2.length)];
+        p = allp[allrk2.indexOf(rKr)];
+    } else if (m > 6 && m < 8) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk3) - Math.max.apply(null, allrk2)) + Math.max.apply(null, allrk2)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 8) {
+        rKr = allrk3[Math.floor(Math.random() * allrk3.length)];
+        p = allp[allrk3.indexOf(rKr)];
+    } else if (m > 8 && m < 10) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk4) - Math.max.apply(null, allrk3)) + Math.max.apply(null, allrk3)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 10) {
+        rKr = allrk4[Math.floor(Math.random() * allrk4.length)];
+        p = allp[allrk4.indexOf(rKr)];
+    } else if (m > 10 && m < 12) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk5) - Math.max.apply(null, allrk4)) + Math.max.apply(null, allrk4)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 12) {
+        rKr = allrk5[Math.floor(Math.random() * allrk5.length)];
+        p = allp[allrk5.indexOf(rKr)];
+    } else if (m > 12 && m < 15) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk6) - Math.max.apply(null, allrk5)) + Math.max.apply(null, allrk5)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 15) {
+        rKr = allrk6[Math.floor(Math.random() * allrk6.length)];
+        p = allp[allrk6.indexOf(rKr)];
+    } else if (m > 15 && m < 20) {
+        rKr = (Math.random() * (Math.max.apply(null, allrk7) - Math.max.apply(null, allrk6)) + Math.max.apply(null, allrk6)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    } else if (m === 20) {
+        rKr = allrk7[Math.floor(Math.random() * allrk7.length)];
+        p = allp[allrk7.indexOf(rKr)];
+    } else if (m > 20) {
+        rKr = (Math.random() * ((Math.max.apply(null, allrk7) + 0.12 * m) - Math.max.apply(null, allrk7)) + Math.max.apply(null, allrk7)).toFixed(2);
+        p = (Math.random() * (Math.max.apply(null, allp) - Math.min.apply(null, allp)) + Math.min.apply(null, allp)).toFixed(2);
+    }
+    console.log(`Оскільки m=${m}, візьмемо значення Rkr = ${rKr} і довірчу ймовірність p = ${p}`);
 
     function test(r) {
         let ttt = 0;
